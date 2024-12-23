@@ -1,0 +1,58 @@
+{
+  "name": "solarfreunde",
+  "type": "module",
+  "scripts": {
+    "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
+    "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
+    "devsafe": "rm -rf .next && cross-env NODE_OPTIONS=--no-deprecation next dev",
+    "generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
+    "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
+    "typecheck": "cross-env NODE_OPTIONS=--no-deprecation tsc --noEmit",
+    "lint": "cross-env NODE_OPTIONS=--no-deprecation next lint",
+    "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
+    "start": "cross-env NODE_OPTIONS=--no-deprecation next start",
+    "seed": "tsx ./src/seed/run.ts"
+  },
+  "dependencies": {
+    "@payloadcms/db-mongodb": "^3.11.0",
+    "@payloadcms/email-nodemailer": "^3.11.0",
+    "@payloadcms/next": "^3.11.0",
+    "@payloadcms/plugin-seo": "^3.11.0",
+    "@payloadcms/richtext-lexical": "^3.11.0",
+    "@payloadcms/storage-s3": "^3.11.0",
+    "@payloadcms/ui": "^3.11.0",
+    "clsx": "^2.1.1",
+    "cross-env": "^7.0.3",
+    "date-fns": "^4.1.0",
+    "date-fns-tz": "^3.2.0",
+    "graphql": "^16.8.1",
+    "next": "^15.1.0",
+    "nodemailer": "^6.9.16",
+    "nodemailer-zeptomail-transport": "^1.0.13",
+    "payload": "^3.11.0",
+    "prettier": "^3.4.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sharp": "^0.32.6",
+    "tailwind-merge": "^2.5.5"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@types/node": "^22.5.4",
+    "@types/nodemailer": "^6.4.17",
+    "@types/react": "19.0.1",
+    "@types/react-dom": "19.0.1",
+    "@unocss/postcss": "^0.65.2",
+    "dotenv": "^16.4.7",
+    "eslint": "^9.16.0",
+    "eslint-config-next": "15.1.0",
+    "glob": "^11.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "5.7.2",
+    "unocss": "^0.64.0"
+  },
+  "engines": {
+    "node": "^18.20.2 || >=20.9.0"
+  },
+  "packageManager": "pnpm@8.15.7+sha512.c85cd21b6da10332156b1ca2aa79c0a61ee7ad2eb0453b88ab299289e9e8ca93e6091232b25c07cbf61f6df77128d9c849e5c9ac6e44854dbd211c49f3a67adc"
+}

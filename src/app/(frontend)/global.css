@@ -1,0 +1,16 @@
+@unocss;
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+.disable-margin-block *:first-child {
+  margin-top: 0 !important;
+}
+.disable-margin-block *:last-child {
+  margin-bottom: 0 !important;
+}
+
+a[href^='mailto:'] {
+  font-size: 120%;
+}
